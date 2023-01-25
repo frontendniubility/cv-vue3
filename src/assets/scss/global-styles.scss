@@ -1,0 +1,55 @@
+@import '../css/normalize.css';
+@import '../css/fonts.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 18px;
+    color: $color-text;
+}
+body {
+    font-family: 'Jost', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $color-bg;
+    background: linear-gradient(
+        265deg,
+        $bgradient1 0%,
+        $bgradient2 50%,
+        $bgradient3 100%
+    );
+}
+main {
+    width: 800px;
+    margin: 0 auto;
+}
+a {
+    color: $color-link;
+    font-weight: 500;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $color-link-underline;
+    &:hover {
+        color: darken($color-link, 30);
+    }
+    &:not([href^="/img/"]):not([href^="mailto"])::after {
+        content: '';
+        display: inline-flex;
+        margin-left: 3px;
+        background-image: url('/img/external-link.svg');
+        background-size: 12px 12px;
+        height: 12px;
+        width: 12px;
+    }
+    &[href^="/img/"] {
+        color: $color-image;
+        cursor: url('/img/zoom-in.svg'), pointer;
+        &:hover {
+            color: darken($color-image, 30);
+        }
+    }
+}
+b {
+    font-weight: 600;
+}

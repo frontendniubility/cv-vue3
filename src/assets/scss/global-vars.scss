@@ -1,0 +1,18 @@
+
+$gradient1: #0e3da3;
+$gradient2: #09d7d7;
+$gradient3: #04c081;
+
+$bgradient1: #2a4b92;
+$bgradient2: #00bac8;
+$bgradient3: #3a856c;
+
+$color-bg: $bgradient1;
+$color-bg-paper: #d7d9d2;
+
+$color-text: #25211d;
+$color: darken($gradient3, 5);
+$color-quote: darken($color, 25);
+$color-link-underline: #1584AE;
+$color-link: darken($color-link-underline, 25);
+$color-image: lighten($color-link, 15);
